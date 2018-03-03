@@ -1,6 +1,6 @@
 Start a mysql docker container:
 
-docker run --name=mysql1 -e "MYSQL_ROOT_PASSWORD=admin" -d mysql/mysql-server:latest
+docker run --name=mysql1 -e "MYSQL_ROOT_PASSWORD=admin" -p 3306:3306 -d mysql/mysql-server:latest
 
 go inside mysql:
 
