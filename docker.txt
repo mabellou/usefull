@@ -1,0 +1,14 @@
+Start a mysql docker container:
+
+docker run --name=mysql1 -e "MYSQL_ROOT_PASSWORD=admin" -d mysql/mysql-server:latest
+
+go inside mysql:
+
+docker exec -it mysql1 mysql -uroot -p
+THEN (only when asked), "admin"
+
+SHOW DATABASES
+CREATE DATABASE test;
+USE test;
+CREATE TABLE example ( id smallint unsigned not null auto_increment, name varchar(20) not null, constraint pk_example primary key (id) );
+INSERT INTO example ( id, name ) VALUES ( null, 'Sample data' );
